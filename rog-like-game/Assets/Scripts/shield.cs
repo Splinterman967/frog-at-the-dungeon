@@ -23,8 +23,7 @@ public class shield : MonoBehaviour
         Debug.Log("collide");
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            //Debug.Log("collide");
-            //Destroy(collision.gameObject);
+
         }
     }
 }
