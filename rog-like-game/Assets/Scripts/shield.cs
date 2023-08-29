@@ -16,14 +16,15 @@ public class shield : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+  
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("collide");
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("collide");
-            enemy.EnemyHP -= 1;
-            //Shield temas ettiði süre boyunca canlarýný -1 azaltacak
+            //Debug.Log("collide");
+            //Destroy(collision.gameObject);
         }
     }
 }
