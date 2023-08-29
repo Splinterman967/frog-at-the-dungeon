@@ -212,7 +212,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_movespeed: 0
   player_damage: 20
-  player_hp: 100
 --- !u!1 &4083980662625680067
 GameObject:
   m_ObjectHideFlags: 0
