@@ -61,8 +61,4 @@ public class playerInputs : MonoBehaviour
         gunPoint.rotation = Quaternion.Euler(0, 0, lookAngle);
     }
 
-
-   
-
-
 }
