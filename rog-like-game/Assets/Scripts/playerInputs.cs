@@ -35,7 +35,7 @@ public class playerInputs : MonoBehaviour
     {
 
         moveInput = value.Get<Vector2>();
-        Debug.Log(moveInput);
+      
 
     }
 

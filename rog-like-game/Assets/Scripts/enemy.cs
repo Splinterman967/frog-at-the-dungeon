@@ -11,7 +11,7 @@ public class enemy : MonoBehaviour
 {
 
     [SerializeField] float enemy_movespeed;
-    [SerializeField] float enemy_damage;
+    [SerializeField] public float enemy_damage;
     public float enemy_hp;
 
     playerAttrabiutes player;
@@ -57,8 +57,10 @@ public class enemy : MonoBehaviour
     {
         //When enemys hits the player
         if (collision.gameObject.CompareTag("Player"))
-        {
-            player.player_hp -= enemy_damage;
+        { 
+            playerAttrabiutes.player_hp -= enemy_damage;
+         
+             Debug.Log(playerAttrabiutes.player_hp);
         }
     }
 

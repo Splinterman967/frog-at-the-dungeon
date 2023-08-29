@@ -7,17 +7,21 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public float  can, animasyonYavasligi;
+    float  can, animasyonYavasligi;
     private float maxCan, GercekScale;
 
     void Start()
-    {
+    {      
         maxCan = can;        
     }
 
     // Update is called once per frame
     void Update()
     {
+        can = playerAttrabiutes.player_hp;
+
+        Debug.Log("CAN : "+ can);
+
         GercekScale = can / maxCan;
 
         if (transform.localScale.x > GercekScale)

@@ -7,12 +7,13 @@ public class playerAttrabiutes : MonoBehaviour
 
     [SerializeField] float player_movespeed;
     [SerializeField] float player_damage;
-    public  float player_hp;
+    public static float player_hp = 100;
 
     // Start is called before the first frame update
     void Start()
     {
-        player_hp = 100;
+        Debug.Log(player_hp);
+        
     }
 
     // Update is called once per frame
@@ -26,7 +27,7 @@ public class playerAttrabiutes : MonoBehaviour
         if (player_hp <= 0)
         {
 
-            Debug.Log(player_hp);
+           // Debug.Log(player_hp);
             Destroy(gameObject);
         }
     }
@@ -35,7 +36,7 @@ public class playerAttrabiutes : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<enemy>().enemy_hp -= player_damage;
+           collision.gameObject.GetComponent<enemy>().enemy_hp -= player_damage;
         }
     }
 

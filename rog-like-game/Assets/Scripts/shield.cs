@@ -20,7 +20,7 @@ public class shield : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("collide");
+      
         if (collision.gameObject.CompareTag("Enemy"))
         {
 
