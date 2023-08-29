@@ -22,7 +22,8 @@ public class shield : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("collide");
-            Destroy(collision.gameObject);
+            enemy.EnemyHP -= 1;
+            //Shield temas ettiði süre boyunca canlarýný -1 azaltacak
         }
     }
 }

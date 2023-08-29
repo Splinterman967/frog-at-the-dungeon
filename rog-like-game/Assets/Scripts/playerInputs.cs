@@ -61,5 +61,15 @@ public class playerInputs : MonoBehaviour
         gunPoint.rotation = Quaternion.Euler(0, 0, lookAngle);
     }
 
-   
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            HealthBar.can -= 1;
+            enemy.EnemyHP -= 10;
+            //Düþman temas ettiðinde can 1 azalacak
+        }
+    }
+
+
 }

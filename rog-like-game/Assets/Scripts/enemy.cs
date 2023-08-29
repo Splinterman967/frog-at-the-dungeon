@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,8 +10,9 @@ using UnityEngine.SceneManagement;
 public class enemy : MonoBehaviour
 {
 
-  
+
     [SerializeField] float enemy_movespeed = 0.000000000001f;
+    public static float EnemyHP;
 
     public Transform player_transform;
 
@@ -18,8 +20,8 @@ public class enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-  
-       // player_transform = player.GetComponent<Transform>();
+
+        // player_transform = player.GetComponent<Transform>();
 
         player_transform = GameObject.FindGameObjectWithTag("Player").transform;
     }
@@ -31,7 +33,7 @@ public class enemy : MonoBehaviour
 
     }
 
-    
+
 
 
     void followPlayer()
@@ -40,16 +42,13 @@ public class enemy : MonoBehaviour
 
         player_direction.Normalize();
 
-        float enemy_speed =   enemy_movespeed * Time.deltaTime;
+        float enemy_speed = enemy_movespeed * Time.deltaTime;
 
-       // transform.Translate(player_direction);
+        // transform.Translate(player_direction);
 
         transform.position = Vector2.MoveTowards(transform.position, player_transform.position, enemy_speed);
     }
-
-
-  
-  
-
+    
+    
 
 }
