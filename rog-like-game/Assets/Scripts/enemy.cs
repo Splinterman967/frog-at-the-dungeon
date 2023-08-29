@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +9,6 @@ using UnityEngine.SceneManagement;
 
 public class enemy : MonoBehaviour
 {
-
 
     [SerializeField] float enemy_movespeed;
     [SerializeField] float enemy_damage;
@@ -22,8 +22,8 @@ public class enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-  
-       // player_transform = player.GetComponent<Transform>();
+
+        // player_transform = player.GetComponent<Transform>();
 
         player_transform = GameObject.FindGameObjectWithTag("Player").transform;
     }
@@ -35,7 +35,7 @@ public class enemy : MonoBehaviour
 
     }
 
-    
+
 
 
     void followPlayer()
@@ -44,12 +44,13 @@ public class enemy : MonoBehaviour
 
         player_direction.Normalize();
 
-        float enemy_speed =   enemy_movespeed * Time.deltaTime;
+        float enemy_speed = enemy_movespeed * Time.deltaTime;
 
-       // transform.Translate(player_direction);
+        // transform.Translate(player_direction);
 
         transform.position = Vector2.MoveTowards(transform.position, player_transform.position, enemy_speed);
     }
+
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -60,7 +61,6 @@ public class enemy : MonoBehaviour
             player.player_hp -= enemy_damage;
         }
     }
-
 
 
 
