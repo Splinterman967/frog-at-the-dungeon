@@ -134,7 +134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632c5f9478c0f7a4c8664c94532a0bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy_movespeed: 1
+  enemy_movespeed: 2
+  enemy_damage: 15
+  enemy_hp: 200
   player_transform: {fileID: 0}
   player_direction: {x: 0, y: 0, z: 0}
 --- !u!50 &3044798676092954081
