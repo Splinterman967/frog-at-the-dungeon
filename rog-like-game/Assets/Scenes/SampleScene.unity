@@ -175,10 +175,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5294151733755867994, guid: 6f13bd887439ab04e9ff811e4b1f6527, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -267,10 +263,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: big-enemy (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6599481972019347433, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -325,8 +317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfbb4d5d1d991bc48a3d126066306ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  can: 100
-  animasyonYavasligi: 50
 --- !u!1 &115333180
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,10 +498,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1617758566568538368, guid: 8205c2884df8746428e46d1ecd444ea5, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1034662878}
     - target: {fileID: 6151788156908465337, guid: 8205c2884df8746428e46d1ecd444ea5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.08
@@ -555,10 +541,6 @@ PrefabInstance:
     - target: {fileID: 6151788156908465339, guid: 8205c2884df8746428e46d1ecd444ea5, type: 3}
       propertyPath: m_Name
       value: mini-enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 6578057260920551101, guid: 8205c2884df8746428e46d1ecd444ea5, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -798,14 +780,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1766104154652288630, guid: 8ffdb70fa99d15a43a975a227858eaa8, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6176947186766750155, guid: 8ffdb70fa99d15a43a975a227858eaa8, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1034662878}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1205,10 +1179,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1633833601411725396, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1034662878}
     - target: {fileID: 6161046771694593517, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.11
@@ -1252,10 +1222,6 @@ PrefabInstance:
     - target: {fileID: 6161046771694593519, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
       propertyPath: m_Name
       value: big-enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 6599481972019347433, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1301,26 +1267,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1617758566568538368, guid: 8205c2884df8746428e46d1ecd444ea5, type: 3}
-      propertyPath: enemies.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1617758566568538368, guid: 8205c2884df8746428e46d1ecd444ea5, type: 3}
-      propertyPath: enemies.Array.data[0]
-      value: 
-      objectReference: {fileID: 6161046771694593519, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
-    - target: {fileID: 1617758566568538368, guid: 8205c2884df8746428e46d1ecd444ea5, type: 3}
-      propertyPath: enemies.Array.data[1]
-      value: 
-      objectReference: {fileID: 5147302619473750364, guid: 6f13bd887439ab04e9ff811e4b1f6527, type: 3}
-    - target: {fileID: 1617758566568538368, guid: 8205c2884df8746428e46d1ecd444ea5, type: 3}
-      propertyPath: enemies.Array.data[2]
-      value: 
-      objectReference: {fileID: 1626935094206200944, guid: 8ffdb70fa99d15a43a975a227858eaa8, type: 3}
-    - target: {fileID: 1617758566568538368, guid: 8205c2884df8746428e46d1ecd444ea5, type: 3}
-      propertyPath: enemies.Array.data[3]
-      value: 
-      objectReference: {fileID: 1038629191368028648, guid: 641f72981fe4d5542aad13852e8be53f, type: 3}
     - target: {fileID: 6151788156908465337, guid: 8205c2884df8746428e46d1ecd444ea5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.457901
@@ -1364,10 +1310,6 @@ PrefabInstance:
     - target: {fileID: 6151788156908465339, guid: 8205c2884df8746428e46d1ecd444ea5, type: 3}
       propertyPath: m_Name
       value: mini-enemy (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6578057260920551101, guid: 8205c2884df8746428e46d1ecd444ea5, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1513,11 +1455,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b41ca87e5f120bb4ba0b2e0fe3cb7a15, type: 3}
---- !u!1 &1034662878 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 216801434333205763, guid: b41ca87e5f120bb4ba0b2e0fe3cb7a15, type: 3}
-  m_PrefabInstance: {fileID: 1034662877}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1034662883 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 216801434333205764, guid: b41ca87e5f120bb4ba0b2e0fe3cb7a15, type: 3}
@@ -1761,10 +1698,6 @@ PrefabInstance:
     - target: {fileID: 1626935094206200946, guid: 8ffdb70fa99d15a43a975a227858eaa8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1766104154652288630, guid: 8ffdb70fa99d15a43a975a227858eaa8, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
