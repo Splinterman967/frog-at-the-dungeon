@@ -8,6 +8,7 @@ public class playerInputs : MonoBehaviour
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] float moveSpeed = 4f;
     [SerializeField] Transform gunPoint;
+   
    // [SerializeField] float bulletSpeed = 20f;
 
 
@@ -21,7 +22,6 @@ public class playerInputs : MonoBehaviour
     void Start()
     {
         playerTransform = GetComponent<Transform>();
-
     }
 
     // Update is called once per frame
@@ -60,6 +60,7 @@ public class playerInputs : MonoBehaviour
 
         gunPoint.rotation = Quaternion.Euler(0, 0, lookAngle);
     }
+
 
    
 

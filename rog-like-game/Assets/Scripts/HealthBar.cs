@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public static float  can, animasyonYavasligi;
+    public float  can, animasyonYavasligi;
     private float maxCan, GercekScale;
 
     void Start()
