@@ -44,9 +44,7 @@ public class enemySpawner : MonoBehaviour
                 player_transform.rotation);
         }
 
-        void calculete_spawn_points()
-        {
-        }
+       
 
     }
 
