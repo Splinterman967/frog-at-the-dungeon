@@ -4,11 +4,10 @@ using System.Security.Cryptography.X509Certificates;
 using System.Transactions;
 using UnityEngine;
 using UnityEngine.UI;
-
+    
 public class HealthBar : MonoBehaviour
 {
-    static float can=100; 
-    float animasyonYavasligi=50;
+    float  can, animasyonYavasligi;
     private float maxCan, GercekScale;
 
     void Start()

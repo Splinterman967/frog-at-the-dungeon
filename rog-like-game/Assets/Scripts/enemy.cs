@@ -32,10 +32,17 @@ public class enemy : MonoBehaviour
     void Update()
     {
         followPlayer();
-
+        isDead();
     }
 
 
+    void isDead()
+    {
+        if (enemy_hp <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
 
     void followPlayer()
