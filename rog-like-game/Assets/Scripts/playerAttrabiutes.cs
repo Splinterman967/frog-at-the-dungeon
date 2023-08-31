@@ -19,6 +19,8 @@ public class playerAttrabiutes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         isDead();
     }
 
