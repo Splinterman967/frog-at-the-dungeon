@@ -12,9 +12,10 @@ public class enemy : MonoBehaviour
 
     [SerializeField] float enemy_movespeed;
     [SerializeField] public float enemy_damage;
+
     public float enemy_hp;
 
-    playerAttrabiutes player;
+    public float scor_point;
 
     public Transform player_transform;
 
@@ -22,9 +23,7 @@ public class enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        // player_transform = player.GetComponent<Transform>();
-
+        scor_point = enemy_hp;
         player_transform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -38,8 +37,13 @@ public class enemy : MonoBehaviour
 
     void isDead()
     {
+
         if (enemy_hp <= 0)
         {
+            //  enemy_hp = GetComponent<enemy>().enemy_hp;
+
+            scor.changeScor(scor_point);
+
             Destroy(this.gameObject);
         }
     }

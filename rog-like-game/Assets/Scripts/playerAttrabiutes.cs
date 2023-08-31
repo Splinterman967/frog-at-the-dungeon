@@ -12,7 +12,7 @@ public class playerAttrabiutes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(player_hp);
+      
         
     }
 
