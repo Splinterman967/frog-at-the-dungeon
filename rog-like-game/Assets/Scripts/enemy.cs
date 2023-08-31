@@ -12,6 +12,7 @@ public class enemy : MonoBehaviour
 
     [SerializeField] float enemy_movespeed;
     [SerializeField] public float enemy_damage;
+    [SerializeField] GameObject ExpPoint;
 
     public float enemy_hp;
 
@@ -45,6 +46,7 @@ public class enemy : MonoBehaviour
             scor.changeScor(scor_point);
 
             Destroy(this.gameObject);
+            Instantiate(ExpPoint);
         }
     }
 

@@ -136,7 +136,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy_movespeed: 3
   enemy_damage: 7
+  ExpPoint: {fileID: 8985083416585987492, guid: 8bd933c86b2c06b44993f366e2a13e90, type: 3}
   enemy_hp: 70
+  scor_point: 0
   player_transform: {fileID: 0}
   player_direction: {x: 0, y: 0, z: 0}
 --- !u!50 &-6324977605758015073

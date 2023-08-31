@@ -7,6 +7,9 @@ public class ExpBar : MonoBehaviour
 {
     public float Exp, animasyonYavasligi;
     private float maxExp, GercekScale;
+    private float Experience_Level = 1;
+
+    [SerializeField] UpgradePanelMenu upgradePanel;  
 
     void Start()
     {
@@ -32,7 +35,14 @@ public class ExpBar : MonoBehaviour
         if (Exp >= maxExp)
         {
             Exp = 0;
-            maxExp *= 2;
+            maxExp += 200;
+            Experience_Level += 1;
+            LevelUP();
         }
+    }
+
+    private void LevelUP()
+    {                                         
+        upgradePanel.openPanel();
     }
 }
