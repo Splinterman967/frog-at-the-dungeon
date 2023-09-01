@@ -43,7 +43,7 @@ public class enemy : MonoBehaviour
         {
             //  enemy_hp = GetComponent<enemy>().enemy_hp;
 
-            scor.changeScor(scor_point);
+            //scor.changeScor(scor_point);
 
             Destroy(this.gameObject);
             dropExpPoint();
