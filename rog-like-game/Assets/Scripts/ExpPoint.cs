@@ -8,8 +8,10 @@ public class ExpPoint : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<ExpBar>().Exp += 10;
             Destroy(this.gameObject);
+            ExpBar.Exp += 10;
+            //exp point yok olacak ve experience hanemize 10 puan eklencek
+            
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ExpBar : MonoBehaviour
 {
-    public float Exp=10; 
+    public static float Exp=10; 
     float animasyonYavasligi = 50;
     private float maxExp, GercekScale;
     private float Experience_Level = 1;
