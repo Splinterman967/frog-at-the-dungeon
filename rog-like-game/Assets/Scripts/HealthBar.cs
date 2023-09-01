@@ -19,9 +19,20 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        UpdateHP();
+
+
+       // gameObject.GetComponentInParent<RectTransform>().position = new Vector3(-10, 19, 0);
+
+    }
+
+
+    void UpdateHP()
+    {
         can = playerAttrabiutes.player_hp;
 
-        Debug.Log("CAN : "+ can);
+        Debug.Log("CAN : " + can);
 
         GercekScale = can / maxCan;
 
@@ -35,7 +46,7 @@ public class HealthBar : MonoBehaviour
             transform.localScale = new Vector3(transform.localScale.x + (GercekScale - transform.localScale.x) / animasyonYavasligi, transform.localScale.y, transform.localScale.z);
         }
 
-        if (Input.GetKeyDown("z") && can>0)
+        if (Input.GetKeyDown("z") && can > 0)
         {
             can -= 10;
         }
@@ -49,7 +60,8 @@ public class HealthBar : MonoBehaviour
         {
             can = maxCan;
         }
-
-        
     }
+
+
+
 }

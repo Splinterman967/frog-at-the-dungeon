@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class sword : MonoBehaviour
 {
 
     [SerializeField] float sword_damage;
+    [SerializeField] TextMeshProUGUI damage_text;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,10 @@ public class sword : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<enemy>().enemy_hp -= sword_damage;
+
+            Instantiate(damage_text, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
+
+            damage_text.text = sword_damage.ToString();
         }
     }
 }

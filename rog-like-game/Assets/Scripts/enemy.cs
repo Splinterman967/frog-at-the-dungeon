@@ -64,6 +64,7 @@ public class enemy : MonoBehaviour
 
 
 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //When enemys hits the player

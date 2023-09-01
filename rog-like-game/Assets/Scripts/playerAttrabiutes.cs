@@ -31,6 +31,7 @@ public class playerAttrabiutes : MonoBehaviour
 
            // Debug.Log(player_hp);
             Destroy(gameObject);
+            Time.timeScale = 0;
         }
     }
 
@@ -42,4 +43,4 @@ public class playerAttrabiutes : MonoBehaviour
         }
     }
 
-}
+} 
