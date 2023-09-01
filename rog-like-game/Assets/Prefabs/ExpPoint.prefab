@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2845156361384877846}
   - component: {fileID: 2117088719912161204}
+  - component: {fileID: -7741341900421189625}
   m_Layer: 0
   m_Name: ExpPoint
-  m_TagString: Untagged
+  m_TagString: ExpPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
-  m_Color: {r: 0.17621933, g: 0.4394296, b: 0.8301887, a: 1}
+  m_Color: {r: 0.39716092, g: 0.5595359, b: 0.8018868, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-7741341900421189625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8985083416585987492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8fd6d3f3fc0f647bb655acda7bdbc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

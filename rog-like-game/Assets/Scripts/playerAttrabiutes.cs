@@ -6,6 +6,8 @@ public class playerAttrabiutes : MonoBehaviour
 {
 
     [SerializeField] float player_movespeed;
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject deathPanel;
     [SerializeField] float player_damage;
     public static float player_hp = 100;
 
@@ -19,8 +21,6 @@ public class playerAttrabiutes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
         isDead();
     }
 
@@ -28,10 +28,12 @@ public class playerAttrabiutes : MonoBehaviour
     {
         if (player_hp <= 0)
         {
+            deathScene();
+            // Debug.Log(player_hp);
+            player.SetActive(false);
+            
+            
 
-           // Debug.Log(player_hp);
-            Destroy(gameObject);
-            Time.timeScale = 0;
         }
     }
 
@@ -42,5 +44,13 @@ public class playerAttrabiutes : MonoBehaviour
            collision.gameObject.GetComponent<enemy>().enemy_hp -= player_damage;
         }
     }
+
+    private void deathScene()
+    {
+        deathPanel.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+
 
 } 

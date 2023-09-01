@@ -46,7 +46,7 @@ public class enemy : MonoBehaviour
             scor.changeScor(scor_point);
 
             Destroy(this.gameObject);
-            Instantiate(ExpPoint);
+            dropExpPoint();
         }
     }
 
@@ -62,6 +62,12 @@ public class enemy : MonoBehaviour
         // transform.Translate(player_direction);
 
         transform.position = Vector2.MoveTowards(transform.position, player_transform.position, enemy_speed);
+    }
+
+    private void dropExpPoint()
+    {
+        Vector3 position = transform.position;
+        GameObject expPoint = Instantiate( ExpPoint, position, Quaternion.identity);
     }
 
 
