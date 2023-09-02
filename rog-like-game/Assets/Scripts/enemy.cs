@@ -12,6 +12,7 @@ public class enemy : MonoBehaviour
 
     [SerializeField] float enemy_movespeed;
     [SerializeField] public float enemy_damage;
+    [SerializeField] GameObject ExpPoint;
 
     public float enemy_hp;
 
@@ -42,9 +43,10 @@ public class enemy : MonoBehaviour
         {
             //  enemy_hp = GetComponent<enemy>().enemy_hp;
 
-            scor.changeScor(scor_point);
+            //scor.changeScor(scor_point);
 
             Destroy(this.gameObject);
+            dropExpPoint();
         }
     }
 
@@ -60,6 +62,12 @@ public class enemy : MonoBehaviour
         // transform.Translate(player_direction);
 
         transform.position = Vector2.MoveTowards(transform.position, player_transform.position, enemy_speed);
+    }
+
+    private void dropExpPoint()
+    {
+        Vector3 position = transform.position;
+        GameObject expPoint = Instantiate( ExpPoint, position, Quaternion.identity);
     }
 
 

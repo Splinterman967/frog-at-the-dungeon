@@ -5,12 +5,16 @@ using UnityEngine.UI;
 
 public class ExpBar : MonoBehaviour
 {
-    public float Exp, animasyonYavasligi;
+    public static float Exp=10; 
+    float animasyonYavasligi = 50;
     private float maxExp, GercekScale;
+    private float Experience_Level = 1;
+
+    [SerializeField] UpgradePanelMenu upgradePanel;  
 
     void Start()
     {
-        Exp = 1;
+        Exp = 0;
         maxExp = 100;
     }
 
@@ -32,7 +36,14 @@ public class ExpBar : MonoBehaviour
         if (Exp >= maxExp)
         {
             Exp = 0;
-            maxExp *= 2;
+            maxExp += 200;
+            Experience_Level += 1;
+            LevelUP();
         }
+    }
+
+    private void LevelUP()
+    {                                         
+        upgradePanel.openPanel();
     }
 }
