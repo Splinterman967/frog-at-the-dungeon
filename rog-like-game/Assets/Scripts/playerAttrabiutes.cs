@@ -1,40 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerAttrabiutes : MonoBehaviour
 {
 
     [SerializeField] float player_movespeed;
-    [SerializeField] GameObject player;
-    [SerializeField] GameObject deathPanel;
     [SerializeField] float player_damage;
     public static float player_hp = 100;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-      
-        
-    }
 
-    // Update is called once per frame
+  
     void Update()
     {
-        isDead();
+        isPlayerDead();
     }
 
-    void isDead()
+    public static bool  isPlayerDead()
     {
         if (player_hp <= 0)
         {
-            deathScene();
-            // Debug.Log(player_hp);
-            player.SetActive(false);
-            
-            
-
+            return true;
         }
+         return false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -45,12 +34,7 @@ public class playerAttrabiutes : MonoBehaviour
         }
     }
 
-    private void deathScene()
-    {
-        deathPanel.SetActive(true);
-        Time.timeScale = 0;
-    }
-
+  
 
 
 } 

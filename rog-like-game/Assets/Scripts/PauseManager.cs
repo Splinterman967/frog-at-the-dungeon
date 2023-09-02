@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+  
     public void PauseGame()
     {
         Time.timeScale = 0f;
@@ -15,11 +16,9 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+   
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            Time.timeScale = 0f;
-        }
+      
     }
 }

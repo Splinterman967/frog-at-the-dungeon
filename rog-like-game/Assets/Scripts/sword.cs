@@ -8,13 +8,13 @@ public class sword : MonoBehaviour
 
     [SerializeField] float sword_damage;
     [SerializeField] TextMeshProUGUI damage_text;
-    // Start is called before the first frame update
+   
     void Start()
     {
         sword_damage = 50;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         spinSword();
@@ -29,13 +29,18 @@ public class sword : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<enemy>().enemy_hp -= sword_damage;
 
-            Instantiate(damage_text, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
+           // Instantiate(damage_text, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
 
-            damage_text.text = sword_damage.ToString();
+            //damage_text.text = sword_damage.ToString();
         }
     }
 }

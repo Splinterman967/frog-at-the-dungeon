@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class UpgradePanelMenu : MonoBehaviour
 {
-    [SerializeField] GameObject panel;
+    [SerializeField] GameObject UpgradePanel;
     PauseManager pauseManager;
 
     private void Awake()
+    {
+       
+    }
+
+    private void Start()
     {
         pauseManager = GetComponent<PauseManager>();
     }
@@ -15,12 +20,12 @@ public class UpgradePanelMenu : MonoBehaviour
     public void openPanel()
     {
     pauseManager.PauseGame();
-    panel.SetActive(true); 
+    UpgradePanel.SetActive(true); 
     }
 
     public void ClosePanel()
     {
     pauseManager.UnPauseGame();
-    panel.SetActive(false);
+    UpgradePanel.SetActive(false);
     }
 }

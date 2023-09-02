@@ -18,12 +18,7 @@ public class wand : MonoBehaviour
     {
 
 
-       
-    }
 
-    void OnFire()
-    {
-      
     }
 
     IEnumerator Fire()

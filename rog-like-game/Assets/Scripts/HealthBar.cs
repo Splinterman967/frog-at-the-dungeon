@@ -32,8 +32,6 @@ public class HealthBar : MonoBehaviour
     {
         can = playerAttrabiutes.player_hp;
 
-        Debug.Log("CAN : " + can);
-
         GercekScale = can / maxCan;
 
         if (transform.localScale.x > GercekScale)
