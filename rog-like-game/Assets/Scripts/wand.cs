@@ -6,36 +6,25 @@ using UnityEngine.InputSystem;
 public class wand : MonoBehaviour
 {
     [Header("Projectile")]
-    [SerializeField] GameObject projectile;
+    [SerializeField] GameObject electroball;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine( Fire());
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-
-
-    }
-
     IEnumerator Fire()
     {
 
         while (true)
         {
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(projectile.electroball_frequency);
 
             GameObject spell_ball;
            
-            
-            spell_ball = Instantiate(projectile, transform.position, transform.rotation);
+            spell_ball = Instantiate(electroball, transform.position, transform.rotation);
 
-
-        }
+       }
        
     }
 

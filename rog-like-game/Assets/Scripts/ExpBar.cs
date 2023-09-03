@@ -14,7 +14,7 @@ public class ExpBar : MonoBehaviour
 
     void Start()
     {
-        Exp = 0;
+        Exp = 90;
         maxExp = 100;
     }
 
@@ -35,7 +35,7 @@ public class ExpBar : MonoBehaviour
 
         if (Exp >= maxExp)
         {
-            Exp = 0;
+            Exp = 90;
             maxExp += 200;
             Experience_Level += 1;
             LevelUP();

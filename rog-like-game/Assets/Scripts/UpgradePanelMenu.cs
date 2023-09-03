@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class UpgradePanelMenu : MonoBehaviour
 {
-    [SerializeField] GameObject UpgradePanel;
-    PauseManager pauseManager;
+    [SerializeField] GameObject LevelUpPanel;
+    [SerializeField] Transform[] augment_positions;
+    [SerializeField] GameObject[] Augments;
 
-    private void Awake()
-    {
-       
-    }
+    PauseManager pauseManager;
 
     private void Start()
     {
@@ -19,13 +17,26 @@ public class UpgradePanelMenu : MonoBehaviour
 
     public void openPanel()
     {
+
     pauseManager.PauseGame();
-    UpgradePanel.SetActive(true); 
+    LevelUpPanel.SetActive(true);
+
+        idenitfyAugments();
     }
 
     public void ClosePanel()
     {
     pauseManager.UnPauseGame();
-    UpgradePanel.SetActive(false);
+    LevelUpPanel.SetActive(false);
+    }
+
+    void idenitfyAugments()
+    {
+        int a0 = Random.Range(0, Augments.Length);
+        int a1 = Random.Range(0, Augments.Length);
+        int a2 = Random.Range(0, Augments.Length);
+        GameObject augment0 = Instantiate(Augments[a0], augment_positions[0]);     
+        GameObject augment1 = Instantiate(Augments[a1], augment_positions[1]);
+        GameObject augment2 = Instantiate(Augments[a2], augment_positions[2]);
     }
 }

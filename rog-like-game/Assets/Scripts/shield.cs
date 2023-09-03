@@ -5,27 +5,22 @@ using UnityEngine;
 public class shield : MonoBehaviour
 {
 
-    [SerializeField] float shield_damage;
-    // Start is called before the first frame update
-    void Start()
+    public static float shield_damage=20;
+    private float damage;
+    private void Update()
     {
-        shield_damage = 20;
+        updateDamage();
     }
-
-    // Update is called once per frame
-    void Update()
+    void updateDamage()
     {
-        
+        damage = shield_damage * playerAttrabiutes.damage_scale;
     }
-
-  
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<enemy>().enemy_hp -= shield_damage;
+            collision.gameObject.GetComponent<enemy>().enemy_hp -= damage;
         }
     }
 }
