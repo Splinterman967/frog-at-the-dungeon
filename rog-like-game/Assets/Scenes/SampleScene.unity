@@ -2414,7 +2414,8 @@ PrefabInstance:
       propertyPath: electroball
       value: 
       objectReference: {fileID: 2429169119783229290, guid: d2a4bb039c266b945a1997e5be1d0835, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1290971253309190494, guid: b41ca87e5f120bb4ba0b2e0fe3cb7a15, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
