@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class playerInputs : MonoBehaviour
 {
     [SerializeField] GameObject bulletPrefab;
-    [SerializeField] float moveSpeed = 4f;
+    [SerializeField] float moveSpeed;
     [SerializeField] Transform gunPoint;
    
    // [SerializeField] float bulletSpeed = 20f;
@@ -22,6 +22,7 @@ public class playerInputs : MonoBehaviour
     void Start()
     {
         playerTransform = GetComponent<Transform>();
+        moveSpeed = playerAttrabiutes.player_movespeed;
     }
 
     // Update is called once per frame

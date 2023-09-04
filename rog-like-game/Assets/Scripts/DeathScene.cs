@@ -20,25 +20,23 @@ public class DeathScene : MonoBehaviour
     void playerDeath()
     {
 
-        if (playerAttrabiutes.isPlayerDead())
+        if (player.IsDestroyed())
         {
-            
             deathPanel.SetActive(true);
-            player.SetActive(false);
-            Time.timeScale = 0;
+
+          
         }
+       
+        Debug.Log(Time.timeScale + "   " + playerAttrabiutes.player_hp+ "  "+  player.IsDestroyed());
+
+
     }
     public void RestartButton()
     {
         Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
         deathPanel.SetActive(false);
-        player.SetActive(true);
-        print("olduk");
-        //Scene scene;
-        //scene = SceneManager.GetActiveScene();
-        //SceneManager.LoadScene(scene.name);
-        SceneManager.LoadScene("SampleScene");
-       
 
+        playerAttrabiutes.player_hp = 100;
     }
 }

@@ -10,9 +10,9 @@ public class LevelUp : MonoBehaviour
     [SerializeField] GameObject wand;
 
     public bool is_first_augment = true;
-    public bool is_first_samurai = false;
-    public bool is_first_shield = false;
-    public bool is_first_electro = false;
+   // public bool is_first_samurai = false;
+    //public bool is_first_shield = false;
+    //public bool is_first_electro = false;
 
     public void samuraiSword()
     {

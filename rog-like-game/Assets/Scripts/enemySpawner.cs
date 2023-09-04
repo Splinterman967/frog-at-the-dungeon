@@ -32,16 +32,20 @@ public class enemySpawner : MonoBehaviour
         //loop for every 0.3 seconds
         while (true)
         {
+            
             random_enemy = Random.Range(0, enemies.Length);
             random_point= Random.Range(0, spawn_points.Length);
 
             yield return new WaitForSeconds(0.3f);
 
-            
-            GameObject enemy = Instantiate
-                (enemies[random_enemy],
-                spawn_points[random_point].position,
-                player_transform.rotation);
+            if (player_transform!=null)
+            {
+                GameObject enemy = Instantiate
+             (enemies[random_enemy],
+             spawn_points[random_point].position,
+             player_transform.rotation);
+            }
+         
         }
 
        

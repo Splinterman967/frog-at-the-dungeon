@@ -6,32 +6,54 @@ using UnityEngine.SceneManagement;
 public class playerAttrabiutes : MonoBehaviour
 {
 
-    public static float player_movespeed=2.5f;
+    public static float player_movespeed=8f;
     public static float player_damage=10f;
     public static float player_hp = 100f;
     public static float damage_scale=1f;
     private float damage = 10f;
 
+
+    
     void Update()
     {
        
         isPlayerDead();
         updateDamage();
+     
 
+
+    }
+    private void FixedUpdate()
+    {
+
+        destroyPlayer();
     }
 
     public static bool  isPlayerDead()
     {
         if (player_hp <= 0)
         {
+        
             return true;
+        
         }
-         return false;
+       
+       
+        return false;
     }
 
     void updateDamage()
     {
         damage = player_damage * damage_scale;
+    }
+
+    void destroyPlayer()
+    {
+        if (isPlayerDead())
+        {
+            Destroy(gameObject);
+        
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

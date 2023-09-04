@@ -7,13 +7,14 @@ using UnityEngine.UI;
     
 public class HealthBar : MonoBehaviour
 {
-    public static float can = 100;
+    public static float currentHp=100;
     float animasyonYavasligi=50;
-    private float maxCan, GercekScale;
+    private float canBolum, canOlcek;
 
     void Start()
-    {      
-        maxCan = can;        
+    {
+       
+        canBolum = currentHp;        
     }
 
     // Update is called once per frame
@@ -30,33 +31,38 @@ public class HealthBar : MonoBehaviour
 
     void UpdateHP()
     {
-        can = playerAttrabiutes.player_hp;
+        currentHp = playerAttrabiutes.player_hp;
 
-        GercekScale = can / maxCan;
+        canOlcek = currentHp / canBolum;
 
-        if (transform.localScale.x > GercekScale)
+
+
+        //can olcegýný azalt
+        if (transform.localScale.x > canOlcek)
         {
-            transform.localScale = new Vector3(transform.localScale.x - (transform.localScale.x - GercekScale) / animasyonYavasligi, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(transform.localScale.x - (transform.localScale.x - canOlcek) / animasyonYavasligi, transform.localScale.y, transform.localScale.z);
         }
 
-        if (transform.localScale.x < GercekScale)
+        
+        //can olcegýný arttýr
+        if (transform.localScale.x < canOlcek)
         {
-            transform.localScale = new Vector3(transform.localScale.x + (GercekScale - transform.localScale.x) / animasyonYavasligi, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(transform.localScale.x + (canOlcek - transform.localScale.x) / animasyonYavasligi, transform.localScale.y, transform.localScale.z);
         }
 
-        if (Input.GetKeyDown("z") && can > 0)
+        if (Input.GetKeyDown("z") && currentHp > 0)
         {
-            can -= 10;
+            currentHp -= 10;
         }
 
-        if (Input.GetKeyDown("x") && can < maxCan)
+        if (Input.GetKeyDown("x") && currentHp < canBolum)
         {
-            can += 10;
+            currentHp += 10;
         }
 
-        if (can > maxCan)
+        if (currentHp > canBolum)
         {
-            can = maxCan;
+            currentHp = canBolum;
         }
     }
 

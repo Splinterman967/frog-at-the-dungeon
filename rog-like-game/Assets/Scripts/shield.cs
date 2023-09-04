@@ -5,7 +5,7 @@ using UnityEngine;
 public class shield : MonoBehaviour
 {
 
-    public static float shield_damage=20;
+    public static float shield_damage=10;
     private float damage;
     private void Update()
     {
@@ -15,9 +15,9 @@ public class shield : MonoBehaviour
     {
         damage = shield_damage * playerAttrabiutes.damage_scale;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+ 
+    private void OnTriggerStay2D(Collider2D collision)
     {
-
         if (collision.gameObject.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<enemy>().enemy_hp -= damage;

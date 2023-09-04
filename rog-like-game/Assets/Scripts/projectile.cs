@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class projectile : MonoBehaviour
 {
-    public static float electroball_damage;
-    public static float electroball_frequency;
+    public static float electroball_damage=20f;
+    public static float electroball_frequency = 3f;
     private float damage;
 
     Rigidbody2D projectile_rigidbody;

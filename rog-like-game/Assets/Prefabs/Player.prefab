@@ -132,14 +132,13 @@ GameObject:
   - component: {fileID: 3834806274988211064}
   - component: {fileID: 4824805917799364527}
   - component: {fileID: 5953947108184673742}
-  - component: {fileID: 1290971253309190494}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &749718144685850620
 Transform:
   m_ObjectHideFlags: 0
@@ -292,41 +291,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.244844, y: 0.16421631}
   m_EdgeRadius: 0
---- !u!70 &1290971253309190494
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 520932794918097991}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.69382435, y: -0.0057167877}
-  m_Size: {x: 1.2754608, y: 0.11899723}
-  m_Direction: 1
 --- !u!1 &720938784082118899
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5296429411469319379
 Transform:
   m_ObjectHideFlags: 0
@@ -406,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05bc0f9a10040d941ac87c39297cfb51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  electroball: {fileID: 0}
+  electroball: {fileID: 2429169119783229290, guid: d2a4bb039c266b945a1997e5be1d0835, type: 3}
 --- !u!1 &1167921753500345780
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,7 +540,7 @@ GameObject:
   - component: {fileID: 5369207042797966943}
   - component: {fileID: 561792875285490398}
   - component: {fileID: 1181528648670974774}
-  - component: {fileID: 1978520797416439236}
+  - component: {fileID: 7237230335468970906}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -763,7 +727,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1978520797416439236
+--- !u!114 &7237230335468970906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1393,13 +1357,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17b091337499043459246025993bcfb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  samurai_sword: {fileID: 0}
-  aura_shield: {fileID: 0}
-  wand: {fileID: 0}
+  samurai_sword: {fileID: 520932794918097991}
+  aura_shield: {fileID: 6790783907096381244}
+  wand: {fileID: 1121875088882577138}
   is_first_augment: 1
-  is_first_samurai: 1
-  is_first_shield: 1
-  is_first_electro: 1
 --- !u!1 &8816262005837852731
 GameObject:
   m_ObjectHideFlags: 0

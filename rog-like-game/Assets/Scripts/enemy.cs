@@ -49,7 +49,7 @@ public class enemy : MonoBehaviour
 
     void followPlayer()
     {
-        if (!playerAttrabiutes.isPlayerDead())
+        if (player_transform !=null)
         {
             player_direction = player_transform.position - transform.position;
 
