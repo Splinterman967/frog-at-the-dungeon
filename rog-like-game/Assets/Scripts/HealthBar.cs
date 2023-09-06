@@ -60,9 +60,9 @@ public class HealthBar : MonoBehaviour
             currentHp += 10;
         }
 
-        if (currentHp < canBolum)
+        if (currentHp > canBolum)
         {
-            currentHp = -5* currentHp;
+            currentHp = canBolum;
         }
     }
 

@@ -38,5 +38,6 @@ public class DeathScene : MonoBehaviour
         deathPanel.SetActive(false);
 
         playerAttrabiutes.player_hp = 100;
+        HealthBar.currentHp = 100; 
     }
 }
