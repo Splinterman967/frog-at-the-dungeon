@@ -27,6 +27,7 @@ public class sword : MonoBehaviour
     void updateDamage()
     {
         damage = sword_damage * playerAttrabiutes.damage_scale;
+      
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,6 +35,7 @@ public class sword : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<enemy>().enemy_hp -= damage;
+           
 
            // Instantiate(damage_text, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
 

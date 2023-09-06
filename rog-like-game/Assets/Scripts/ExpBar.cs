@@ -30,7 +30,7 @@ public class ExpBar : MonoBehaviour
 
         if (Input.GetKeyDown("c"))
         {
-            Exp += 10;
+            Exp += 50;
         }
 
         if (Exp >= maxExp)

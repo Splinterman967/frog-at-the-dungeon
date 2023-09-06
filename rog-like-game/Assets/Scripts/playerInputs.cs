@@ -22,7 +22,7 @@ public class playerInputs : MonoBehaviour
     void Start()
     {
         playerTransform = GetComponent<Transform>();
-        moveSpeed = playerAttrabiutes.player_movespeed;
+      
     }
 
     // Update is called once per frame
@@ -30,6 +30,7 @@ public class playerInputs : MonoBehaviour
     {
        // setlookDirection();
         Move();
+
     }
 
     void OnMove(InputValue value)
@@ -51,6 +52,7 @@ public class playerInputs : MonoBehaviour
     }
     void Move()
     {
+        moveSpeed = playerAttrabiutes.player_movespeed;
         playerTransform.Translate(moveInput * moveSpeed * Time.deltaTime);
     }
 
