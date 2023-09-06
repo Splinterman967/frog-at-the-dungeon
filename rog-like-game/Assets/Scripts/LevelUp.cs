@@ -60,7 +60,7 @@ public class LevelUp : MonoBehaviour
 
     public void boostUp()
     {
-        playerAttrabiutes.player_movespeed += 0.3f;
+        playerAttrabiutes.player_movespeed += 0.4f;
         closePanel();
     }
 
