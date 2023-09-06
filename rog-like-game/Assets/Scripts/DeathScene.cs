@@ -27,7 +27,7 @@ public class DeathScene : MonoBehaviour
           
         }
        
-        Debug.Log(Time.timeScale + "   " + playerAttrabiutes.player_hp+ "  "+  player.IsDestroyed());
+       // Debug.Log(Time.timeScale + "   " + playerAttrabiutes.player_hp+ "  "+  player.IsDestroyed());
 
 
     }
