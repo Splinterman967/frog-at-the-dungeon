@@ -42,5 +42,7 @@ public class projectile : MonoBehaviour
         projectile_rigidbody = GetComponent<Rigidbody2D>();
 
         projectile_rigidbody.AddForce(force);
+
+        AudioManager.Instance.PlaySFX("laserShot");
     }
 }

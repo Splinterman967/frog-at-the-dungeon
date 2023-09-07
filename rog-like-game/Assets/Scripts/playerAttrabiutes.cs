@@ -51,8 +51,9 @@ public class playerAttrabiutes : MonoBehaviour
     {
         if (isPlayerDead())
         {
+            AudioManager.Instance.PlaySFX("death");
             Destroy(gameObject);
-        
+            
         }
     }
 

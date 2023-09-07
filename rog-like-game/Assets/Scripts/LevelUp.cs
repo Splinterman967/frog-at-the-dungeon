@@ -19,6 +19,7 @@ public class LevelUp : MonoBehaviour
         samurai_sword.SetActive(true);
         sword.sword_damage += 20;
         sword.sword_speed -= 70;
+
         closePanel();
 
     }
@@ -58,15 +59,17 @@ public class LevelUp : MonoBehaviour
         closePanel();
     }
 
-    public void boostUp()
+    public void speedUp()
     {
-        playerAttrabiutes.player_movespeed += 0.4f;
+        playerAttrabiutes.player_movespeed += 1f;
         closePanel();
     }
 
     void closePanel()
     {
+      
         Time.timeScale = 1f;
+        AudioManager.Instance.PlaySFX("selectAugment");
         gameObject.SetActive(false);
     }
 

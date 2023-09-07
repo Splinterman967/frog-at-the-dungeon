@@ -78,6 +78,7 @@ public class enemy : MonoBehaviour
         //When enemys hits the player
         if (collision.gameObject.CompareTag("Player"))
         { 
+            AudioManager.Instance.PlaySFX("hurt");
             playerAttrabiutes.player_hp -= enemy_damage;
 
         }

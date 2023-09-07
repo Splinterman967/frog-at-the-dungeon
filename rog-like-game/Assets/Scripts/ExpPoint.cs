@@ -42,6 +42,7 @@ public class ExpPoint : MonoBehaviour
         {
             Destroy(this.gameObject);
             ExpBar.Exp += 100;
+            AudioManager.Instance.PlaySFX("expPointCollect");
             //exp point yok olacak ve experience hanemize 10 puan eklencek
 
         }

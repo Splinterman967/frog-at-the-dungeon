@@ -43,7 +43,8 @@ public class ExpBar : MonoBehaviour
     }
 
     private void LevelUP()
-    {                                         
+    {
+        AudioManager.Instance.PlaySFX("levelUp");
         upgradePanel.openPanel();
     }
 }
