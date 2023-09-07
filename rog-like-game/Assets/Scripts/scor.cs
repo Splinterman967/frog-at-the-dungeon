@@ -13,7 +13,7 @@ public class scor : MonoBehaviour
     {
         scor_point =0;
 
-        scor_text = GetComponentInChildren<TextMeshProUGUI>();
+        scor_text = GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame

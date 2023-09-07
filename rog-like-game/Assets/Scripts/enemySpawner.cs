@@ -36,7 +36,7 @@ public class enemySpawner : MonoBehaviour
             random_enemy = Random.Range(0, enemies.Length);
             random_point= Random.Range(0, spawn_points.Length);
 
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.5f);
 
             if (player_transform!=null)
             {
@@ -45,8 +45,12 @@ public class enemySpawner : MonoBehaviour
              spawn_points[random_point].position,
              player_transform.rotation);
             }
+
+
          
         }
+
+      
 
        
 

@@ -39,8 +39,8 @@ public class LevelUp : MonoBehaviour
      
         projectile.electroball_frequency -= 0.3f;
 
-        if (projectile.electroball_frequency <= 0)
-                    projectile.electroball_frequency += 0.3f;
+        if (projectile.electroball_frequency <= 0.3f)
+                    projectile.electroball_frequency = 0.3f;
         
       
             closePanel();
