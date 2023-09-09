@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5150394896055804527}
   - component: {fileID: 3315340892220733877}
   - component: {fileID: 6220541731889084992}
-  - component: {fileID: -5339240994313880822}
   m_Layer: 0
   m_Name: BOSS
   m_TagString: Enemy
@@ -139,7 +138,6 @@ MonoBehaviour:
   enemy_damage: 100
   ExpPoint: {fileID: 8985083416585987492, guid: 8bd933c86b2c06b44993f366e2a13e90, type: 3}
   enemy_hp: 20000
-  old_enemy_hp: 0
   scor_point: 0
   player_transform: {fileID: 0}
   player_direction: {x: 0, y: 0, z: 0}
@@ -170,17 +168,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-5339240994313880822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4710199460468419268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1045bb1c99ea9b2449769fff8adb3942, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flashMaterial: {fileID: 2100000, guid: a70e51e24cf53a44483aa24925f58441, type: 2}
-  duration: 1
