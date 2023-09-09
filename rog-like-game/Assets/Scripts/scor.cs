@@ -8,6 +8,7 @@ public class scor : MonoBehaviour
 
     [SerializeField] static TextMeshProUGUI scor_text;
     public  static float scor_point;
+    TreasureChest treasureChest;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class scor : MonoBehaviour
     {
         scor_point += point;
 
+        TreasureChest.sandik_puani += point;
         scor_text.text = "Scor : " + scor_point.ToString();
     }
 }

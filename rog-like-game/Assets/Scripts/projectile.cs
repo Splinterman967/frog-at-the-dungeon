@@ -31,6 +31,7 @@ public class projectile : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<enemy>().enemy_hp -= damage;
+            Destroy(gameObject);
         }
     }
 
