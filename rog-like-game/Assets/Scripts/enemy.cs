@@ -71,14 +71,13 @@ public class enemy : MonoBehaviour
         GameObject expPoint = Instantiate( ExpPoint, position, Quaternion.identity);
     }
 
-
-
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //When enemys hits the player
         if (collision.gameObject.CompareTag("Player"))
         { 
+                    
+            
             AudioManager.Instance.PlaySFX("hurt");
             playerAttrabiutes.player_hp -= enemy_damage;
 
