@@ -5,10 +5,14 @@ using TMPro;
 
 public class sword : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI damage_text;
+  
+    [SerializeField] damagePopUp dmg_popUp;
+
     public static float sword_damage= 20;
     public static float sword_speed=-100;
     private float damage;
+
+   
 
     void Update()
     {
@@ -35,9 +39,8 @@ public class sword : MonoBehaviour
         {
             collision.gameObject.GetComponent<enemy>().enemy_hp -= damage;
 
-            // Instantiate(damage_text, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
-
-            //damage_text.text = sword_damage.ToString();
+            dmg_popUp.damage_popUp(damage, collision);
         }
     }
+
 }

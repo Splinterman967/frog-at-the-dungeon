@@ -7,9 +7,10 @@ using UnityEngine.SceneManagement;
 
 
 
+
 public class enemy : MonoBehaviour
 {
-
+  
     [SerializeField] float enemy_movespeed;
     [SerializeField] public float enemy_damage;
     [SerializeField] GameObject ExpPoint;
@@ -100,6 +101,6 @@ public class enemy : MonoBehaviour
     }
 
 
-
+   
 
 }

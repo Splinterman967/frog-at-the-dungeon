@@ -18,9 +18,10 @@ public class UpgradePanelMenu : MonoBehaviour
     public void openPanel()
     {
 
-    pauseManager.PauseGame();
-    LevelUpPanel.SetActive(true);
+       pauseManager.PauseGame();
+       LevelUpPanel.SetActive(true);
 
+      
         idenitfyAugments();
     }
 

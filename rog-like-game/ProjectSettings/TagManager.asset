@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - ExpPoint
+  - dmgPopUp
   layers:
   - Default
   - TransparentFX
