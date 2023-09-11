@@ -12,7 +12,7 @@ public class damagePopUp : MonoBehaviour
 
     private void Update()
     {
-        gameObject.transform.position += new Vector3(xSpeed, ySpeed)* Time.deltaTime;    
+        gameObject.transform.position += new Vector3(xSpeed, ySpeed)* Time.deltaTime;
     }
 
     public void damage_popUp(float damage, Collider2D collision)

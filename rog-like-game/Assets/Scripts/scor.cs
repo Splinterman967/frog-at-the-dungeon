@@ -25,7 +25,7 @@ public class scor : MonoBehaviour
     public static void  changeScor(float point)
     {
         scor_point += point;
-
+        TreasureChest.sandik_puani += point;
         scor_text.text = "Scor : " + scor_point.ToString();
     }
 }

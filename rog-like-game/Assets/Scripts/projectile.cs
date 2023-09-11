@@ -39,6 +39,7 @@ public class projectile : MonoBehaviour
         {
           
             collision.gameObject.GetComponent<enemy>().enemy_hp -= damage;
+            Destroy(gameObject);
 
             dmg_popUp.damage_popUp(damage, collision);
         }
