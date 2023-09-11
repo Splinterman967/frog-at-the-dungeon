@@ -21,14 +21,21 @@ public class enemy : MonoBehaviour
     public Transform player_transform;
 
     public Vector3 player_direction;
-   
+
+    MeshRenderer meshRenderer;
+    Color origColor;
+    float flashTime = 100f;
+
+
     void Start()
     {
         scor_point = enemy_hp;
         player_transform = GameObject.FindGameObjectWithTag("Player").transform;
+        meshRenderer = GetComponent<MeshRenderer>();
+        origColor = meshRenderer.material.color;
     }
 
-    
+
     void Update()
     {
         followPlayer();
@@ -71,17 +78,25 @@ public class enemy : MonoBehaviour
         GameObject expPoint = Instantiate( ExpPoint, position, Quaternion.identity);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+      private void OnCollisionEnter2D(Collision2D collision)
     {
         //When enemys hits the player
         if (collision.gameObject.CompareTag("Player"))
-        { 
-                    
-            
+        {
+
+           
             AudioManager.Instance.PlaySFX("hurt");
             playerAttrabiutes.player_hp -= enemy_damage;
 
+            meshRenderer.material.color = Color.red;
+            Invoke("FlashStop", flashTime);
+
         }
+    }
+
+    private void FlashStop()
+    {
+        meshRenderer.material.color = origColor;    
     }
 
 
