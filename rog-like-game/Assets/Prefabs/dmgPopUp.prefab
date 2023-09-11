@@ -78,7 +78,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1519585387
   m_SortingLayer: 1
-  m_SortingOrder: 535
+  m_SortingOrder: 596
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &4251064076165652569
 MonoBehaviour:
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_isVolumetricText: 0
   _SortingLayer: 0
   _SortingLayerID: 0
-  _SortingOrder: 535
+  _SortingOrder: 596
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2459211125581038080}
   m_maskType: 0
