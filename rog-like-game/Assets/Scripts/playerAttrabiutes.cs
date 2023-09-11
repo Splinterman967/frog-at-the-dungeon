@@ -19,6 +19,11 @@ public class playerAttrabiutes : MonoBehaviour
        
         isPlayerDead();
         updateDamage();
+
+        if (player_hp > HealthBar.canBolum)
+        {
+            player_hp = HealthBar.canBolum;
+        }
      
 
 

@@ -7,8 +7,8 @@ using UnityEngine.UI;
     
 public class HealthBar : MonoBehaviour
 {
-    public static float currentHp=100, canBolum;
-    float animasyonYavasligi=50;
+    public static float currentHp=100f, canBolum;
+    float animasyonYavasligi=50f;
     private float canOlcek;
 
     void Start()
@@ -48,16 +48,6 @@ public class HealthBar : MonoBehaviour
         if (transform.localScale.x < canOlcek)
         {
             transform.localScale = new Vector3(transform.localScale.x + (canOlcek - transform.localScale.x) / animasyonYavasligi, transform.localScale.y, transform.localScale.z);
-        }
-
-        if (Input.GetKeyDown("z") && currentHp > 0)
-        {
-            currentHp -= 10;
-        }
-
-        if (Input.GetKeyDown("x") && currentHp < canBolum)
-        {
-            currentHp += 10;
         }
 
         if (currentHp > canBolum)
