@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class projectile : MonoBehaviour
 {
+
+    private damagePopUp dmg_popUp;
+
     public static float electroball_damage=20f;
-    public static float electroball_frequency = 3f;
+    public static float electroball_frequency = 0.3f;
     private float damage;
 
+   
     Rigidbody2D projectile_rigidbody;
-  
+
+
     // Start is called before the first frame update
     void Start()
-    {      
+    {
+        dmg_popUp = GameObject.FindGameObjectWithTag("dmgPopUp").GetComponent<damagePopUp>();
         castElectroBall();
     }
 
@@ -30,7 +37,10 @@ public class projectile : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+          
             collision.gameObject.GetComponent<enemy>().enemy_hp -= damage;
+
+            dmg_popUp.damage_popUp(damage, collision);
         }
     }
 
@@ -45,4 +55,7 @@ public class projectile : MonoBehaviour
 
         AudioManager.Instance.PlaySFX("laserShot");
     }
+
+
+    
 }
