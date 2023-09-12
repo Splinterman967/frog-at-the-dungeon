@@ -1,39 +1,59 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerAttrabiutes : MonoBehaviour
 {
 
-    [SerializeField] float player_movespeed;
-    [SerializeField] GameObject player;
-    [SerializeField] GameObject deathPanel;
-    [SerializeField] float player_damage;
-    public static float player_hp = 100;
+    public static float player_movespeed=4f;
+    public static float player_damage=10f;
+    public static float player_hp = 100f;
+    public static float damage_scale=1f;
+    private float damage = 10f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-      
-        
-    }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        isDead();
+       
+        isPlayerDead();
+        updateDamage();
+     
+
+
+    }
+    private void FixedUpdate()
+    {
+
+        destroyPlayer();
     }
 
-    void isDead()
+    public static bool  isPlayerDead()
     {
         if (player_hp <= 0)
         {
-            deathScene();
-            // Debug.Log(player_hp);
-            player.SetActive(false);
-            
-            
+        
+            return true;
+        
+        }
+       
+       
+        return false;
+    }
 
+    void updateDamage()
+    {
+        damage = player_damage * damage_scale;
+    }
+
+    void destroyPlayer()
+    {
+        if (isPlayerDead())
+        {
+            AudioManager.Instance.PlaySFX("death");
+            Destroy(gameObject);
+            
         }
     }
 
@@ -41,16 +61,13 @@ public class playerAttrabiutes : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-           collision.gameObject.GetComponent<enemy>().enemy_hp -= player_damage;
+           collision.gameObject.GetComponent<enemy>().enemy_hp -= damage;
         }
     }
 
-    private void deathScene()
-    {
-        deathPanel.SetActive(true);
-        Time.timeScale = 0;
-    }
+   
 
+  
 
 
 } 

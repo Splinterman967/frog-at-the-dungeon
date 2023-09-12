@@ -14,7 +14,7 @@ public class ExpBar : MonoBehaviour
 
     void Start()
     {
-        Exp = 0;
+        Exp = 90;
         maxExp = 100;
     }
 
@@ -30,12 +30,12 @@ public class ExpBar : MonoBehaviour
 
         if (Input.GetKeyDown("c"))
         {
-            Exp += 10;
+            Exp += 50;
         }
 
         if (Exp >= maxExp)
         {
-            Exp = 0;
+            Exp = 90;
             maxExp += 200;
             Experience_Level += 1;
             LevelUP();
@@ -43,7 +43,8 @@ public class ExpBar : MonoBehaviour
     }
 
     private void LevelUP()
-    {                                         
+    {
+        AudioManager.Instance.PlaySFX("levelUp");
         upgradePanel.openPanel();
     }
 }
