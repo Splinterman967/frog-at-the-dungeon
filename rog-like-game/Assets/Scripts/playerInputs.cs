@@ -8,7 +8,7 @@ public class playerInputs : MonoBehaviour
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] float moveSpeed;
     [SerializeField] Transform gunPoint;
-   
+      
    // [SerializeField] float bulletSpeed = 20f;
 
 

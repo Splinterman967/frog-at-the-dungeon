@@ -49,6 +49,7 @@ public class LevelUp : MonoBehaviour
     public void giantHeart()
     {
         playerAttrabiutes.player_hp += 20;
+        playerAttrabiutes.HealthRegen += 5;
         HealthBar.canBolum += 20;
         closePanel();
     }
