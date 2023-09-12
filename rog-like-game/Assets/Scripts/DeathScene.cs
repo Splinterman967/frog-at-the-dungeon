@@ -23,8 +23,6 @@ public class DeathScene : MonoBehaviour
         if (player.IsDestroyed())
         {
             deathPanel.SetActive(true);
-
-          
         }
        
        // Debug.Log(Time.timeScale + "   " + playerAttrabiutes.player_hp+ "  "+  player.IsDestroyed());

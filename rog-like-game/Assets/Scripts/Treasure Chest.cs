@@ -16,7 +16,7 @@ public class TreasureChest : MonoBehaviour
     void  Update()
     {
 
-        Debug.Log("sandýk puaný : " + +sandik_puani);
+        //Debug.Log("sandýk puaný : " + +sandik_puani);
 
         //eðer score umuzu 1000 olursa haritanýn ortasýnda chest belirecek
         if (sandik_puani >= 1000 && !hasInstantiatedHealthPot)

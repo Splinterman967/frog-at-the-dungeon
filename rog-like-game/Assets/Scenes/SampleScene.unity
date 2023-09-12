@@ -347,7 +347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &115333181
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -540,7 +540,7 @@ MonoBehaviour:
   - soundName: levelUp
     audioClip: {fileID: 8300000, guid: 8b6b09511b20feb478d21921b2db48c8, type: 3}
   - soundName: Sword
-    audioClip: {fileID: 8300000, guid: 89f35b0be3a85264b97a835f2b27629b, type: 3}
+    audioClip: {fileID: 8300000, guid: fa4ff72415118e046a49b468f91a4a0a, type: 3}
   - soundName: ElectroShield
     audioClip: {fileID: 8300000, guid: a591ccd34ea091741a6c15dd309cd898, type: 3}
   - soundName: ShieldDamage
@@ -1299,6 +1299,63 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1842253484269828720, guid: b41ca87e5f120bb4ba0b2e0fe3cb7a15, type: 3}
   m_PrefabInstance: {fileID: 7619543819700004187}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &362627428
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6161046771694593517, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -45.253124
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161046771694593517, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2662138
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161046771694593517, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161046771694593517, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161046771694593517, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161046771694593517, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161046771694593517, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161046771694593517, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161046771694593517, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161046771694593517, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161046771694593519, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
+      propertyPath: m_Name
+      value: big-enemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: df7c8d9fe84ef194c8705f50af0b6998, type: 3}
 --- !u!1001 &368949550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2223,9 +2280,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 30
+  MaxDistance: 5000
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -2258,7 +2315,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -8805,7 +8862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1782202688
 Transform:
   m_ObjectHideFlags: 0
@@ -9410,7 +9467,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 5000
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -14640,14 +14697,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2426965816237959240, guid: b41ca87e5f120bb4ba0b2e0fe3cb7a15, type: 3}
   m_PrefabInstance: {fileID: 7619543819700004187}
   m_PrefabAsset: {fileID: 0}
---- !u!81 &592374811734942732
+--- !u!81 &592374811734942740
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592374811734942724}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!222 &1261560706428282146
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15164,6 +15221,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 561792875285490398, guid: b41ca87e5f120bb4ba0b2e0fe3cb7a15, type: 3}
+      propertyPath: moveSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1733033174427906661, guid: b41ca87e5f120bb4ba0b2e0fe3cb7a15, type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 0
@@ -15250,7 +15311,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2426965816237959240, guid: b41ca87e5f120bb4ba0b2e0fe3cb7a15, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 592374811734942732}
+      addedObject: {fileID: 592374811734942740}
     - targetCorrespondingSourceObject: {fileID: 6790783907096381244, guid: b41ca87e5f120bb4ba0b2e0fe3cb7a15, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1208885281}
@@ -15488,3 +15549,4 @@ SceneRoots:
   - {fileID: 941818619}
   - {fileID: 4651976898194809855}
   - {fileID: 1782202688}
+  - {fileID: 362627428}
