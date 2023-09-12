@@ -17,8 +17,8 @@ public class LevelUp : MonoBehaviour
     public void samuraiSword()
     {
         samurai_sword.SetActive(true);
-        sword.sword_damage += 20;
-        sword.sword_speed -= 70;
+        sword.sword_damage += 10;
+        sword.sword_speed -= 50;
 
         closePanel();
 
@@ -27,17 +27,17 @@ public class LevelUp : MonoBehaviour
     public void auroShield()
     {
         aura_shield.SetActive(true);
-        shield.shield_damage += 20;
+        shield.shield_damage += 5;
         closePanel();
     }
 
     public void electroBall()
     {
         wand.SetActive(true);
-        projectile.electroball_damage += 15f;
+        projectile.electroball_damage += 10f;
 
      
-        projectile.electroball_frequency -= 0.3f;
+        projectile.electroball_frequency -= 0.1f;
 
         if (projectile.electroball_frequency <= 0.3f)
                     projectile.electroball_frequency = 0.3f;
@@ -48,14 +48,14 @@ public class LevelUp : MonoBehaviour
 
     public void giantHeart()
     {
-        playerAttrabiutes.player_hp += 10;
-        HealthBar.canBolum += 10;
+        playerAttrabiutes.player_hp += 20;
+        HealthBar.canBolum += 20;
         closePanel();
     }
 
     public void longSword()
     {
-        playerAttrabiutes.damage_scale += 0.2f;
+        playerAttrabiutes.damage_scale += 0.5f;
         closePanel();
     }
 

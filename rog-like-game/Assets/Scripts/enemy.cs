@@ -45,6 +45,8 @@ public class enemy : MonoBehaviour
             Destroy(this.gameObject);
             dropExpPoint();
             scor.changeScor(scor_point);
+            AudioManager.Instance.PlaySFX("Ouh");
+
         }
     }
 

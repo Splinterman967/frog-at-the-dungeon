@@ -138,7 +138,7 @@ MonoBehaviour:
   enemy_movespeed: 2
   enemy_damage: 15
   ExpPoint: {fileID: 8985083416585987492, guid: 8bd933c86b2c06b44993f366e2a13e90, type: 3}
-  enemy_hp: 200
+  enemy_hp: 400
   scor_point: 0
   player_transform: {fileID: 0}
   player_direction: {x: 0, y: 0, z: 0}
@@ -154,7 +154,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -181,7 +181,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 83fd0e66f36c2f446a90dcb8bdd623a1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.6
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -190,9 +190,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 35
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -225,7 +225,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

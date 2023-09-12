@@ -9,7 +9,7 @@ public class projectile : MonoBehaviour
     private damagePopUp dmg_popUp;
 
     public static float electroball_damage=20f;
-    public static float electroball_frequency = 0.3f;
+    public static float electroball_frequency = 1f;
     private float damage;
 
    

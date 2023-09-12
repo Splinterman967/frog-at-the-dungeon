@@ -10,7 +10,7 @@ public class TreasureChest : MonoBehaviour
     [SerializeField] private GameObject Health_Pot;
     public static float sandik_puani = 0;
     bool isChestAvaliable = false;
-    bool hasInstantiatedHealthPot = false;
+    static bool hasInstantiatedHealthPot = false;
     scor scor;
     // Update is called once per frame
     void  Update()
@@ -36,6 +36,7 @@ public class TreasureChest : MonoBehaviour
             sandik_puani = 0;
             isChestAvaliable = false;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Sandýk_kapalý;
+            hasInstantiatedHealthPot = false;
         }
     
     }

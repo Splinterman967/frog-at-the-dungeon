@@ -19,6 +19,10 @@ public class playerAttrabiutes : MonoBehaviour
        
         isPlayerDead();
         updateDamage();
+        if (player_hp < 4)
+        {
+            AudioManager.Instance.PlaySFX("death");
+        }
      
 
 
@@ -33,7 +37,7 @@ public class playerAttrabiutes : MonoBehaviour
     {
         if (player_hp <= 0)
         {
-        
+           
             return true;
         
         }
@@ -51,7 +55,7 @@ public class playerAttrabiutes : MonoBehaviour
     {
         if (isPlayerDead())
         {
-            AudioManager.Instance.PlaySFX("death");
+           
             Destroy(gameObject);
             
         }

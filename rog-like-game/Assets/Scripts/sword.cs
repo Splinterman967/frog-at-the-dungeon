@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using BarthaSzabolcs.Tutorial_SpriteFlash;
 
 public class sword : MonoBehaviour
 {
-  
     [SerializeField] damagePopUp dmg_popUp;
 
     public static float sword_damage= 20;
     public static float sword_speed=-100;
     private float damage;
-
-   
 
     void Update()
     {
@@ -38,6 +36,9 @@ public class sword : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<enemy>().enemy_hp -= damage;
+            AudioManager.Instance.PlaySFX("Sword");
+
+            //SimpleFlash.Flash();
 
             dmg_popUp.damage_popUp(damage, collision);
         }

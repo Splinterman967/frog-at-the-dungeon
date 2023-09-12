@@ -20,8 +20,6 @@ public class Heatlh_Pot : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
          playerAttrabiutes.player_hp += 10f;
-
-         
          Destroy(gameObject);
 
         }

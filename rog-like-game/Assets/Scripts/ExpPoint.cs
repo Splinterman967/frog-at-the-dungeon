@@ -8,7 +8,7 @@ public class ExpPoint : MonoBehaviour
 
     public Vector3 player_direction;
 
-    float exp_speed = 6f;
+    float exp_speed = 8f;
 
     private void Start()
     {
@@ -41,7 +41,7 @@ public class ExpPoint : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(this.gameObject);
-            ExpBar.Exp += 100;
+            ExpBar.Exp += 25;
             AudioManager.Instance.PlaySFX("expPointCollect");
             //exp point yok olacak ve experience hanemize 10 puan eklencek
 

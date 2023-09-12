@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public static float currentHp=100, canBolum;
-    float animasyonYavasligi=50;
+    float animasyonYavasligi=20;
     private float canOlcek;
 
     void Start()

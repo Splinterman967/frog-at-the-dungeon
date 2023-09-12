@@ -7,13 +7,13 @@ public class shield : MonoBehaviour
 { 
     [SerializeField] damagePopUp dmg_popUp;
 
-    public static float shield_damage=10;
+    public static float shield_damage=5;
     private float damage;
-
 
     private void Update()
     {
         updateDamage();
+
     }
     void updateDamage()
     {
@@ -29,8 +29,9 @@ public class shield : MonoBehaviour
             collision.gameObject.GetComponent<enemy>().enemy_hp -= damage;
 
             dmg_popUp.damage_popUp(damage, collision);
+            AudioManager.Instance.PlaySFX("ShieldDamage");
 
-         
+
         }
     }
 

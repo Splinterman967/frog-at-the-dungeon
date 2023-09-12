@@ -20,6 +20,9 @@ public class enemySpawner : MonoBehaviour
     bool isSpawning = true;
     public float enemy_spawn_period = 1;
 
+    float enemy_spwan_time = 5;
+    float boss_spawn_time = 10;
+
 
     void Start()
     {
@@ -46,26 +49,29 @@ public class enemySpawner : MonoBehaviour
     IEnumerator evolveEnemies()
     {
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(enemy_spwan_time);
         {
             enemies[2] = medium_enemy;
         }
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(enemy_spwan_time);
         {
             enemies[3] = big_enemy;
         }
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(enemy_spwan_time);
         {
             enemies[4] = huge_enemy;
         }
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(boss_spawn_time);
         {
             Instantiate(BOSS,spawn_points[0].position,player_transform.rotation);
             isSpawning = false;
-            StopCoroutine(spawnEnemies());
+            enemy_spwan_time -= 1;
+            boss_spawn_time += 5;
+            enemy_spawn_period += 5;
+            //StopCoroutine(spawnEnemies());
         }
     }
 
