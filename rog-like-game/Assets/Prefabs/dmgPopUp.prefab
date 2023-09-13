@@ -78,7 +78,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1519585387
   m_SortingLayer: 1
-  m_SortingOrder: 4729
+  m_SortingOrder: 4762
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &4251064076165652569
 MonoBehaviour:
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 30
+  m_text: 10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_isVolumetricText: 0
   _SortingLayer: 0
   _SortingLayerID: 0
-  _SortingOrder: 4729
+  _SortingOrder: 4762
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2459211125581038080}
   m_maskType: 0

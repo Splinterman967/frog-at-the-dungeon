@@ -6,14 +6,35 @@ using UnityEngine.UI;
 
 public class FpsScale : MonoBehaviour
 {
-    public float timer, refresh, avgFrameRate;
-    public string display = "{0}";
-    public Text m_Text;
+    public float refreshRate = 1.0f; // Ortalama hesaplanacak saniye sayýsý
+    private float timer = 0.0f;
+    private int frameCount = 0;
+    private float totalFrameTime = 0.0f;
+    [SerializeField] Text m_Text;
+
+    void Start()
+    {
+        //m_Text = GetComponent<Text>();
+    }
+
     void Update()
     {
-        float timelapse = Time.smoothDeltaTime;
-        timer = timer <=0 ? refresh : timer -= timelapse;
-        if (timer <= 0) avgFrameRate = (int)(1f / timelapse);
-        m_Text.text = string.Format("FPS : "+ display, avgFrameRate.ToString());
+        frameCount++;
+        totalFrameTime += Time.unscaledDeltaTime;
+        timer += Time.unscaledDeltaTime;
+
+        if (timer >= refreshRate)
+        {
+            float averageFrameTime = totalFrameTime / frameCount;
+            float averageFPS = 1.0f / averageFrameTime;
+
+            //m_Text.text = "FPS (Last " + refreshRate + "second): " + Mathf.Round(averageFPS);
+            m_Text.text = "FPS : " + Mathf.Round(averageFPS);
+
+            // Sýfýrla
+            frameCount = 0;
+            totalFrameTime = 0.0f;
+            timer = 0.0f;
+        }
     }
 }

@@ -23,7 +23,7 @@ public class DeathScene : MonoBehaviour
     public void RestartButton()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         deathPanel.SetActive(false);
         playerAttrabiutes.player_hp = 100;
         playerAttrabiutes.damage_scale = 1f;
