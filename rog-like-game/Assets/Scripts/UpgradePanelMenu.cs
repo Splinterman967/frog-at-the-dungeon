@@ -7,9 +7,7 @@ public class UpgradePanelMenu : MonoBehaviour
     [SerializeField] GameObject LevelUpPanel;
     [SerializeField] Transform[] augment_positions;
     [SerializeField] GameObject[] Augments;
-
     PauseManager pauseManager;
-
     private void Start()
     {
         pauseManager = GetComponent<PauseManager>();
@@ -17,20 +15,15 @@ public class UpgradePanelMenu : MonoBehaviour
 
     public void openPanel()
     {
-
        pauseManager.PauseGame();
-       LevelUpPanel.SetActive(true);
-
-      
+       LevelUpPanel.SetActive(true);      
         idenitfyAugments();
     }
-
     public void ClosePanel()
     {
     pauseManager.UnPauseGame();
     LevelUpPanel.SetActive(false);
     }
-
     void idenitfyAugments()
     {
         int a0 = Random.Range(0, Augments.Length);

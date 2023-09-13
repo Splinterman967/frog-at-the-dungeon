@@ -6,35 +6,25 @@ public class TheWood : MonoBehaviour
 {
     public Transform player_transform;
     public Vector3 player_direction;
-    // Start is called before the first frame update
     void Start()
     {
         player_transform = GameObject.FindGameObjectWithTag("Player").transform;
     }
-
-    // Update is called once per frame
     void Update()
     {
         followPlayer();
     }
-
     void followPlayer()
     {
         if (player_transform != null)
         {
             player_direction = player_transform.position - transform.position;
-
             player_direction.Normalize();
-
             float wood_speed = 20f * Time.deltaTime;
-
             // transform.Translate(player_direction);
-
             transform.position = Vector2.MoveTowards(transform.position, player_transform.position, wood_speed);
         }
-
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //When enemys hits the player

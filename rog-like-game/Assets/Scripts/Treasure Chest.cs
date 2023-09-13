@@ -12,12 +12,8 @@ public class TreasureChest : MonoBehaviour
     bool isChestAvaliable = false;
     static bool hasInstantiatedHealthPot = false;
     scor scor;
-    // Update is called once per frame
     void  Update()
     {
-
-        //Debug.Log("sandýk puaný : " + +sandik_puani);
-
         //eðer score umuzu 1000 olursa haritanýn ortasýnda chest belirecek
         if (sandik_puani >= 1000 && !hasInstantiatedHealthPot)
         {
@@ -25,10 +21,8 @@ public class TreasureChest : MonoBehaviour
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Sandýk_Acýk;
             Instantiate(Health_Pot);
             hasInstantiatedHealthPot = true;
-        }
-        
+        }         
     }
-
     private void OnTriggerEnter2D(Collider2D Collision)
     {
         if (Collision.gameObject.CompareTag("Player") && isChestAvaliable)
@@ -37,8 +31,7 @@ public class TreasureChest : MonoBehaviour
             isChestAvaliable = false;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Sandýk_kapalý;
             hasInstantiatedHealthPot = false;
-        }
-    
+        }    
     }
 }
 

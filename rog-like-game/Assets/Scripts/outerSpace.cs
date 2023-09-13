@@ -6,25 +6,23 @@ public class outerSpace : MonoBehaviour
 {
     private void Update()
     {
-        Info();
+       // Info();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(collision.gameObject);
-     
+        Destroy(collision.gameObject);            
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(collision.gameObject);
-       
+        Destroy(collision.gameObject);           
     }
 
-    void Info()
-    {
-    Debug.Log(" Sword dmg :  "+ + sword.sword_damage + "  Sword speed  " + sword.sword_speed + "  Shield dmg :  " +
-    shield.shield_damage + "   electro dmg :  " + projectile.electroball_damage + "  electro frequency  " + projectile.electroball_frequency+
-    " \n player speed: " + playerAttrabiutes.player_movespeed+"  player dmg scale: "
-    +playerAttrabiutes.damage_scale+"  player max health: " + playerAttrabiutes.player_hp  );
-   }
+    //void Info()
+    //{
+    //Debug.Log(" Sword dmg :  "+ + sword.sword_damage + "  Sword speed  " + sword.sword_speed + "  Shield dmg :  " +
+    //shield.shield_damage + "   electro dmg :  " + projectile.electroball_damage + "  electro frequency  " + projectile.electroball_frequency+
+    //" \n player speed: " + playerAttrabiutes.player_movespeed+"  player dmg scale: "
+    //+playerAttrabiutes.damage_scale+"  player max health: " + playerAttrabiutes.player_hp  );
+    //}
 }

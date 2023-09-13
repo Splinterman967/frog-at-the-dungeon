@@ -11,16 +11,12 @@ public class HealthBar : MonoBehaviour
     float animasyonYavasligi=20;
     private float canOlcek;
     public static bool Regen = true;
-
     void Start()
     {
         playerAttrabiutes.HealthRegen = 5;
         canBolum = currentHp; 
         StartCoroutine(HPRegen());
-
     }
-
-    // Update is called once per frame
     void Update()
     {
         //Aðýr yara denemesi için yazýldý
@@ -29,26 +25,17 @@ public class HealthBar : MonoBehaviour
         //    StartCoroutine(HPRegen());
         //}
         UpdateHP();
-
-
        // gameObject.GetComponentInParent<RectTransform>().position = new Vector3(-10, 19, 0);
-
     }
-
-
     void UpdateHP()
     {
         currentHp = playerAttrabiutes.player_hp;
-
         canOlcek = currentHp / canBolum; 
-
         //can olcegýný azalt
         if (transform.localScale.x > canOlcek)
         {
             transform.localScale = new Vector3(transform.localScale.x - (transform.localScale.x - canOlcek) / animasyonYavasligi, transform.localScale.y, transform.localScale.z);
-        }
-
-        
+        }                                       
         //can olcegýný arttýr
         if (transform.localScale.x < canOlcek)
         {
@@ -58,10 +45,7 @@ public class HealthBar : MonoBehaviour
         {
             currentHp = canBolum;
         }
-
-
     }
-
     IEnumerator HPRegen()
     {
         while (Regen == true)
@@ -70,9 +54,4 @@ public class HealthBar : MonoBehaviour
          playerAttrabiutes.player_hp += playerAttrabiutes.HealthRegen;
         }
     }
-
-
-
-
-
 }
