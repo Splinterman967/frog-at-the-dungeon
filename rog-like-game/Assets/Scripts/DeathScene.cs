@@ -37,6 +37,6 @@ public class DeathScene : MonoBehaviour
         sword.sword_speed = -100;
         shield.shield_damage = 5;
         projectile.electroball_damage = 20;
-        projectile.electroball_frequency = 1f;
+        projectile.electroball_frequency = 2f;
     }
 }

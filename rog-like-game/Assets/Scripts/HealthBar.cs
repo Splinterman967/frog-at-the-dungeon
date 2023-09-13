@@ -50,7 +50,7 @@ public class HealthBar : MonoBehaviour
     {
         while (Regen == true)
         {
-         yield return new WaitForSeconds(2);
+         yield return new WaitForSeconds(5);
          playerAttrabiutes.player_hp += playerAttrabiutes.HealthRegen;
         }
     }

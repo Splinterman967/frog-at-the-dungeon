@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class playerAttrabiutes : MonoBehaviour
 {
     public static float player_movespeed=4f;
-    public static float player_damage=10f;
+    public static float player_damage=20f;
     public static float player_hp = 100f;
     public static float damage_scale=1f;
-    private float damage = 10f;
+    private float damage;
     public static float HealthRegen;
     void Update()
     {                 

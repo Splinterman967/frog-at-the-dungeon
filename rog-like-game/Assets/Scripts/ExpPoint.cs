@@ -31,7 +31,7 @@ public class ExpPoint : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(this.gameObject);
-            ExpBar.Exp += 25;
+            ExpBar.Exp += 50;
             AudioManager.Instance.PlaySFX("expPointCollect");
             //exp point yok olacak ve experience hanemize 10 puan eklencek
         }

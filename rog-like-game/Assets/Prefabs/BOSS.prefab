@@ -101,10 +101,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy_movespeed: 2
-  enemy_damage: 75
+  enemy_damage: 50
   ExpPoint: {fileID: 8985083416585987492, guid: 8bd933c86b2c06b44993f366e2a13e90, type: 3}
   enemy_hp: 1000
-  scor_point: 0
+  scor_point: 2000
   player_transform: {fileID: 0}
   player_direction: {x: 0, y: 0, z: 0}
 --- !u!50 &6220541731889084992

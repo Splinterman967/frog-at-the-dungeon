@@ -19,9 +19,9 @@ public class sprint : MonoBehaviour
     //2 saniye boyunca bekler
     yield return new WaitForSeconds(1f);
     // Hýzý orijinaline döndürür
-    gameObject.GetComponent<enemy>().enemy_movespeed = 3;
+    gameObject.GetComponent<enemy>().enemy_movespeed = 2;
     // 5 saniye cooldown süresi ekler
-    yield return new WaitForSeconds(5f);
+    yield return new WaitForSeconds(10f);
     isBoosted = false;
     }
 }

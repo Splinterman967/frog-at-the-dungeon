@@ -7,16 +7,16 @@ public class Heatlh_Pot : MonoBehaviour
 {
     void Update()
     {
-       if (transform.position.y <= 1)
+       if (transform.position.y <= 1.5)
        {
-            transform.Translate(0f, 0.02f, 0f);
+            transform.Translate(0f, 0.01f, 0f);
        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-         playerAttrabiutes.player_hp += 10f;
+         playerAttrabiutes.player_hp += 75f;
          Destroy(gameObject);
         }
     }

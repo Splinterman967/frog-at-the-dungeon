@@ -25,7 +25,7 @@ public class ExpBar : MonoBehaviour
         }
         if (Exp >= maxExp)
         {
-            maxExp += 200;
+            maxExp += maxExp*3/2;
             Experience_Level += 1;
             LevelUP();
         }

@@ -135,11 +135,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632c5f9478c0f7a4c8664c94532a0bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy_movespeed: 5
+  enemy_movespeed: 3
   enemy_damage: 5
   ExpPoint: {fileID: 8985083416585987492, guid: 8bd933c86b2c06b44993f366e2a13e90, type: 3}
   enemy_hp: 10
-  scor_point: 0
+  scor_point: 50
   player_transform: {fileID: 0}
   player_direction: {x: 0, y: 0, z: 0}
 --- !u!50 &-7304624753200177270

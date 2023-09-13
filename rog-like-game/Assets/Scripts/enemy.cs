@@ -14,7 +14,7 @@ public class enemy : MonoBehaviour
     public Vector3 player_direction;   
     void Start()
     {
-        scor_point = enemy_hp;
+        //scor_point = enemy_hp;
         player_transform = GameObject.FindGameObjectWithTag("Player").transform;
     }      
     void Update()

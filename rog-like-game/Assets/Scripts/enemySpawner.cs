@@ -12,12 +12,15 @@ public class enemySpawner : MonoBehaviour
     [SerializeField] GameObject BOSS;
     [SerializeField] Transform[] spawn_points;
     [SerializeField] Transform player_transform;
+    [SerializeField] GameObject DangerZone;
     int random_point;
     int random_enemy;
     bool isSpawning = true;
     public float enemy_spawn_period = 1;
-    float enemy_spwan_time = 5;
     float boss_spawn_time = 10;
+    float medium_enemy_spwan_time = 10;
+    float big_enemy_spwan_time = 10;
+    float huge_enemy_spwan_time = 10;
     void Start()
     {
         // player_transform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -30,26 +33,31 @@ public class enemySpawner : MonoBehaviour
     }     
     IEnumerator evolveEnemies()
     {
-        yield return new WaitForSeconds(enemy_spwan_time);
+        yield return new WaitForSeconds(medium_enemy_spwan_time);
         {
             enemies[2] = medium_enemy;
         }
-        yield return new WaitForSeconds(enemy_spwan_time);
+        yield return new WaitForSeconds(big_enemy_spwan_time);
         {
             enemies[3] = big_enemy;
         }
-        yield return new WaitForSeconds(enemy_spwan_time);
+        yield return new WaitForSeconds(huge_enemy_spwan_time);
         {
             enemies[4] = huge_enemy;
+            DangerZone.SetActive(true);
         }
         yield return new WaitForSeconds(boss_spawn_time);
         {
             Instantiate(BOSS,spawn_points[0].position,player_transform.rotation);
-            //isSpawning = false;
-            enemy_spwan_time -= 1;
+            //isSpawning = false;           
             boss_spawn_time += 5;
             enemy_spawn_period += 5;
+            medium_enemy_spwan_time = 5;
+            big_enemy_spwan_time = 5;
+            huge_enemy_spwan_time = 5;
             //StopCoroutine(spawnEnemies());
+            DangerZone.SetActive(false);
+
         }
     }
     IEnumerator spawnEnemies()
