@@ -12,6 +12,7 @@ public class playerAttrabiutes : MonoBehaviour
     private float damage;
     public static float HealthRegen;
     public static bool throwBack = false;
+    float origSpeed;
     void Update()
     {                 
         isPlayerDead();
@@ -54,15 +55,16 @@ public class playerAttrabiutes : MonoBehaviour
         {
            collision.gameObject.GetComponent<enemy>().enemy_hp -= damage;
             throwBack = true;
-            StartCoroutine(ThrowBack());  
+            StartCoroutine(ThrowBack());
         }
         IEnumerator ThrowBack()
         {
-            if (throwBack == true && collision.gameObject.GetComponent<enemy>().enemy_orig_hp <= 500)
+            if (throwBack == true && collision.gameObject.GetComponent<enemy>().enemy_orig_hp <= 500 )
             {
+                origSpeed = collision.gameObject.GetComponent<enemy>().enemy_movespeed;
                 collision.gameObject.GetComponent<enemy>().enemy_movespeed = -20;
                 yield return new WaitForSeconds(0.2f);
-                collision.gameObject.GetComponent<enemy>().enemy_movespeed = collision.gameObject.GetComponent<enemy>().origSpeed;
+                collision.gameObject.GetComponent<enemy>().enemy_movespeed = origSpeed;
                 throwBack = false;
 
             }
