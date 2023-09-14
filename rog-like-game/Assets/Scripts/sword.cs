@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using BarthaSzabolcs.Tutorial_SpriteFlash;
 
 public class sword : MonoBehaviour
 {

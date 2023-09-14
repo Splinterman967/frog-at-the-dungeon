@@ -29,10 +29,7 @@ public class projectile : MonoBehaviour
         {           
             collision.gameObject.GetComponent<enemy>().enemy_hp -= damage;
             dmg_popUp.damage_popUp(damage, collision);
-        }
-
-        Destroy(gameObject);
-        
+        }        
     }
     void castElectroBall()
     {          

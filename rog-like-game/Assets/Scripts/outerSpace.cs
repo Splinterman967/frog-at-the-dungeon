@@ -18,6 +18,10 @@ public class outerSpace : MonoBehaviour
         {
             playerAttrabiutes.player_hp -= 1000;
         }
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
