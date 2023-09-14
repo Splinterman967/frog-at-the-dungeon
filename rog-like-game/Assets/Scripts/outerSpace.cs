@@ -10,7 +10,14 @@ public class outerSpace : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(collision.gameObject);            
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponent<enemy>().enemy_hp -= 1000;
+        }
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerAttrabiutes.player_hp -= 1000;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

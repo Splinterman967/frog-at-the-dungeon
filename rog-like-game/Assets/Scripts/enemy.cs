@@ -11,9 +11,11 @@ public class enemy : MonoBehaviour
     public float enemy_hp;
     public float scor_point;
     public Transform player_transform;
-    public Vector3 player_direction;   
+    public Vector3 player_direction;
+    public float enemy_orig_hp;
     void Start()
     {
+        enemy_orig_hp = enemy_hp;
         //scor_point = enemy_hp;
         player_transform = GameObject.FindGameObjectWithTag("Player").transform;
     }      
@@ -44,6 +46,8 @@ public class enemy : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player_transform.position, enemy_speed);
         }                         
     }
+
+    
     private void dropExpPoint()
     {
         Vector3 position = transform.position;

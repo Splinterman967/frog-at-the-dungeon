@@ -10,6 +10,8 @@ public class sword : MonoBehaviour
     public static float sword_damage= 20;
     public static float sword_speed=-100;
     private float damage;
+    public static bool SwordThrowBack = false;
+    float origSpeed;
     void Update()
     {
         updateDamage();
@@ -33,6 +35,19 @@ public class sword : MonoBehaviour
             AudioManager.Instance.PlaySFX("Sword");
             //SimpleFlash.Flash();
             dmg_popUp.damage_popUp(damage, collision);
+            SwordThrowBack = true;
+            StartCoroutine(ThrowBack());
+        }
+        IEnumerator ThrowBack()
+        {            
+            if (SwordThrowBack == true && collision.gameObject.GetComponent<enemy>().enemy_orig_hp <= 500)
+            {
+                origSpeed = collision.gameObject.GetComponent<enemy>().enemy_movespeed;
+                collision.gameObject.GetComponent<enemy>().enemy_movespeed = -15;
+                yield return new WaitForSeconds(0.3f);
+                collision.gameObject.GetComponent<enemy>().enemy_movespeed = origSpeed;
+                SwordThrowBack = false;
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ public class sprint : MonoBehaviour
         if (!isBoosted)
         {
             StartCoroutine(BoostSpeed());
-        }
+        } 
     }
     IEnumerator BoostSpeed()
     {

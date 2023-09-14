@@ -8,7 +8,7 @@ public class projectile : MonoBehaviour
     private damagePopUp dmg_popUp;
     public static float electroball_damage=20f;
     public static float electroball_frequency = 2f;
-    private float damage;      
+    private float damage;
     Rigidbody2D projectile_rigidbody;
     void Start()
     {
@@ -28,9 +28,11 @@ public class projectile : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {           
             collision.gameObject.GetComponent<enemy>().enemy_hp -= damage;
-            Destroy(gameObject);
             dmg_popUp.damage_popUp(damage, collision);
         }
+
+        Destroy(gameObject);
+        
     }
     void castElectroBall()
     {          
@@ -38,5 +40,5 @@ public class projectile : MonoBehaviour
         projectile_rigidbody = GetComponent<Rigidbody2D>();
         projectile_rigidbody.AddForce(force);
         AudioManager.Instance.PlaySFX("laserShot");
-    }                                                                          
+    }
 }

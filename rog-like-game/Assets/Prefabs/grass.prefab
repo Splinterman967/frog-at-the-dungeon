@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2885876205197740612}
   - component: {fileID: 4320245064357113750}
-  - component: {fileID: -8030133430940449635}
   - component: {fileID: -732020611154521034}
   - component: {fileID: 933109702321711503}
   m_Layer: 0
@@ -87,20 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!182 &-8030133430940449635
-WindZone:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2461416742513780871}
-  m_Enabled: 1
-  m_Mode: 1
-  m_Radius: 20
-  m_WindMain: 100
-  m_WindTurbulence: 100
-  m_WindPulseMagnitude: 100
-  m_WindPulseFrequency: 100
 --- !u!50 &-732020611154521034
 Rigidbody2D:
   serializedVersion: 4

@@ -9,9 +9,9 @@ public class TreasureChest : MonoBehaviour
     [SerializeField] private Sprite Sandýk_Acýk;
     [SerializeField] private GameObject Health_Pot;
     public static float sandik_puani = 0;
-    bool isChestAvaliable = false;
+    public static bool isChestAvaliable = false;
     static bool hasInstantiatedHealthPot = false;
-    scor scor;
+    scor scor;      
     void  Update()
     {
         //eðer score umuzu 1000 olursa haritanýn ortasýnda chest belirecek
