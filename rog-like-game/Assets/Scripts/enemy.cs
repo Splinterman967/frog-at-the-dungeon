@@ -13,9 +13,11 @@ public class enemy : MonoBehaviour
     public Transform player_transform;
     public Vector3 player_direction;
     public float enemy_orig_hp;
+    public float origSpeed;
     void Start()
     {
         enemy_orig_hp = enemy_hp;
+        origSpeed = enemy_movespeed;
         //scor_point = enemy_hp;
         player_transform = GameObject.FindGameObjectWithTag("Player").transform;
     }      
