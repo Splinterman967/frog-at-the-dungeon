@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class playerAttrabiutes : MonoBehaviour
 {
     public static float player_movespeed=4f;
-    public static float player_damage=1f;
+    public static float player_damage=20f;
     public static float player_hp = 100f;
     public static float damage_scale=1f;
     private float damage;
@@ -53,7 +53,7 @@ public class playerAttrabiutes : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-           collision.gameObject.GetComponent<enemy>().enemy_hp -= damage;
+            collision.gameObject.GetComponent<enemy>().enemy_hp -= damage;
             throwBack = true;
             StartCoroutine(ThrowBack());
         }
