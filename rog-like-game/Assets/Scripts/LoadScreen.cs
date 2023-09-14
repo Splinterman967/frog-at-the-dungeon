@@ -16,7 +16,7 @@ public class LoadScreen : MonoBehaviour
 
     IEnumerator startLoading(int start)
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         AsyncOperation async = SceneManager.LoadSceneAsync(start);
         while (!async.isDone)
         {
