@@ -7,15 +7,9 @@ using UnityEngine.UI;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicSource, sfxSource;
-
     public Slider musicSlider, sfxSlider;
-
-
-
-
     private void Awake()
     {
         //Making single instance of audioManager 
@@ -28,14 +22,10 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
     }
-
-
     public void PlayMusic(string name)
     {
         Sound s = Array.Find(musicSounds, x => x.soundName == name);
-
         if (s == null)
         {
             Debug.Log("Music not found");
@@ -46,12 +36,9 @@ public class AudioManager : MonoBehaviour
             musicSource.Play();
         }
     }
-
-
     public void PlaySFX(string name)
     {
         Sound s = Array.Find(sfxSounds, x => x.soundName == name);
-
         if (s == null)
         {
             Debug.Log("SFX not found");
@@ -63,11 +50,9 @@ public class AudioManager : MonoBehaviour
             //sfxSource.Play();
         }
     }
-
     public void StopMusic(string name)
     {
         Sound s = Array.Find(musicSounds, x => x.soundName == name);
-
         if (s == null)
         {
             Debug.Log("Music not found");
@@ -78,11 +63,9 @@ public class AudioManager : MonoBehaviour
             musicSource.Stop();
         }
     }
-
     public void StopSFX(string name)
     {
         Sound s = Array.Find(sfxSounds, x => x.soundName == name);
-
         if (s == null)
         {
             Debug.Log("Music not found");
@@ -93,17 +76,12 @@ public class AudioManager : MonoBehaviour
             sfxSource.Stop();
         }
     }
-
     public void adjustMusic(float volume)
     {
-
         musicSource.volume = musicSlider.value;
-
     }
-
     public void adjustSound(float volume)
     {
         sfxSource.volume = sfxSlider.value;
-
     }
 }

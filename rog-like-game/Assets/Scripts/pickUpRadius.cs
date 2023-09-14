@@ -5,7 +5,6 @@ using UnityEngine;
 public class pickUpRadius : MonoBehaviour
 {
     //Radiusa dokundugunda playera dogru ýlerleyecek
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("ExpPoint"))
